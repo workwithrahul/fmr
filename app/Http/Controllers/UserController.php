@@ -68,6 +68,7 @@ class UserController extends Controller {
     public function homeView(){
         $user = \Auth::user();
         if($user->user_roles == "superadmin"){
+            auth()->login($user); 
             return redirect('/admin/dashboard');
         } else {
 
@@ -81,7 +82,7 @@ class UserController extends Controller {
 
         if (Auth::attempt(['username' => request('username'), 'password' => request('password')])) {
                 $user = \Auth::user();
-                auth()->login($user); 
+
                 return response()->json(['status'=>true,'message'=>'you have been logged in succesfully','data' => $user]);
         } else {
             return response()->json(['status'=>false,'message' => 'Your username or password was incorrect.']);
