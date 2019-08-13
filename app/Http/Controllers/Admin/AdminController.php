@@ -17,8 +17,7 @@ class AdminController extends Controller {
     
     public function __construct(){
         
-        $user = Auth::user();
-        print_r($user); die;
+        $user = \Auth::user();
         if($user->user_roles == "superadmin"){
             return redirect('/admin/dashboard');
         } else {
@@ -26,7 +25,7 @@ class AdminController extends Controller {
            return view('home'); 
         }
     }
-
+    
     public function dashboard(Request $request){
 
         $users = User::where('user_roles','!=','superadmin')->orderBy("id",'DESC')->get();
