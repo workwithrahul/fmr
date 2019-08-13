@@ -15,17 +15,7 @@ use Illuminate\Mail\Message;
 
 class AdminController extends Controller {
     
-    public function __construct(){
-        
-        $user = \Auth::user();
-        if($user->user_roles == "superadmin"){
-            return redirect('/admin/dashboard');
-        } else {
 
-           return view('home'); 
-        }
-    }
-    
     public function dashboard(Request $request){
 
         $users = User::where('user_roles','!=','superadmin')->orderBy("id",'DESC')->get();
