@@ -1,0 +1,232 @@
+
+
+/* @font-face {
+    font-family: SFProMedium;
+    src: url('../fonts/SF-Pro-Text-Medium.otf');
+}
+@font-face {
+    font-family: SFProRegular;
+    src: url('../fonts/SF-Pro-Text-Regular.otf');
+} */
+body, 
+html{
+    min-height: 100%;
+    overflow: hidden;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.full-h{
+    height: 100%;
+}
+.login-wrapper,
+.black-wrapper{
+    background: #070707;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 80px;
+}
+header .user-menu{
+    cursor: pointer;
+    color: #fff;
+}
+header .user-menu .fa-user-circle{
+    font-size: 22px;
+}
+header .user-menu .dropdown-menu{
+    background: #e5e5e5;
+    padding: 0;
+}
+header .user-menu .dropdown-item{
+    background: #e5e5e5;
+    display: block;
+    color: #333;
+    padding: 0 16px;
+    line-height: 26px;
+    text-decoration: none !important;
+}
+header .user-menu .dropdown-item:hover{
+    background: #fff;
+}
+.auth-middle-container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+.auth-middle-container .logo h4{
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 25px;
+}
+#authForm{
+    margin: 100px 0;
+    position: relative;
+}
+.auth-middle-container .logo img{
+    max-width: 245px;
+}
+.other-auth-links a{
+    color: #fff;
+    font-size: 13px;
+}
+.other-auth-links .line,
+.homepage .homepage-container .line{
+    width: 200px;
+    height: 1px;
+    background: #fff;
+    display: block;
+    margin: 20px auto;
+}
+#authForm .form-group{
+    position: relative;
+    margin-bottom: 5px;
+}
+#authForm .form-control{
+    height: 45px;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 6px 13px;
+}
+#authForm .fa-chevron-right{ 
+    position: absolute;
+    opacity: 0;
+    top: 8px;
+    right: 5px;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s;
+    color: #adadad;
+}
+.submit-icon.active{
+    opacity: 1 !important;
+}
+#authForm .fa-chevron-right:hover{
+    right: 3px;
+}
+.form-error{    
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    display: none;
+    margin: 0px 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.homepage .homepage-container{
+    max-width: 550px;
+}
+.homepage .homepage-container .line{
+    width: 600px;
+    max-width: 100%;
+    margin: 80px auto;
+    background: #707070;
+}
+.homepage .homepage-container h2{
+    color: #1893fb;
+    font-weight: 300;
+    font-size: 25px;
+}
+#loader{
+    display: none;
+    background: rgba(255, 255, 255, 0.14);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #202b3b;
+    font-size: 35px;
+}
+#loader span{
+    position: absolute;
+    top: 50%;
+    transform: translateX(50%);
+    left: 0;
+    right: 0;
+}
+.hint-tooltip .tooltip .tooltip-inner{
+    padding: 10px;
+}
+#loginPassword .tooltip .tooltip-inner{
+    padding: 30px;
+}
+.hint-tooltip .tooltip .tooltip-inner h5{
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+.hint-tooltip .tooltip .tooltip-inner ul{
+    margin: 0;
+    padding-left: 15px;
+}
+.green{
+    color: #02ff0b;
+}
+.hint-tooltip .tooltip .tooltip-inner {
+    text-align: left;
+    background: #212121;
+}
+#loginPassword .tooltip .tooltip-inner {
+    max-width: 250px;
+    width: 250px; 
+}
+.hint-tooltip .tooltip{
+    margin-left: 20px;
+    opacity: 1;
+    top: 0 !important;
+    left: 100% !important;
+    width: 300px;
+}
+.hint-tooltip .tooltip > .tooltip-arrow{
+    border-right-color: #212121;
+    border-width: 20px;
+    left: -30px;
+    top: 7.5px !important;
+}
+@media only screen and (max-width: 768px){
+    header{
+        padding: 0 30px;
+    }
+    .auth-middle-container{
+        padding: 0 30px;
+    }
+    .hint-tooltip .tooltip{
+        left: 0px !important;
+        top: 50px !important;
+        width: 100%;
+        margin-left: 0;
+        padding: 0 !important;
+    }
+    #loginPassword .tooltip{
+    }
+    .hint-tooltip .tooltip .tooltip-inner,
+    #loginPassword .tooltip .tooltip-inner{
+        max-width: 100% !important;
+        width: 100%;
+    }
+    .hint-tooltip .tooltip > .tooltip-arrow{
+        top: 100% !important;
+        border-width: 5px 0 5px 5px;
+        border-bottom-color: #000;
+    }
+}
+.red{
+    color: red;
+}
+.ui-autocomplete-loading { 
+    background:url('../images/indicator.gif') no-repeat right center;
+    background-color: #fff; 
+}
