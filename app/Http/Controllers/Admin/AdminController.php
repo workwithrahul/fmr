@@ -17,8 +17,8 @@ class AdminController extends Controller {
     
     public function __construct(){
         
-        $user = \Auth::user();
-        var_dum($user); die;
+        $user = Auth::user();
+        print_r($user); die;
         if($user->user_roles == "superadmin"){
             return redirect('/admin/dashboard');
         } else {
