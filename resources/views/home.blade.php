@@ -24,8 +24,8 @@
                      
                       @csrf
                       <input type="text" id="search_name" placeholder="Search name..." class="form-control" />
-                  <div class="auth-form-wrapper" id="searchData" >
-                      <h2 id="searchEmail">fdfdsf</h2>
+                  <div class="auth-form-wrapper" id="searchData" style="display: none;">
+                      <h2 id="searchEmail"></h2>
                       <span style="color:#e5e5e5;cursor:pointer;" onclick="copyToClipboard('#searchEmail')">Click to copy the above email</span>
                   </div>   
                   </div>
