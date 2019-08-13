@@ -100,7 +100,7 @@ $(document).ready(function () {
     jQuery( "#search_name" ).autocomplete({
       source: function( request, response ) {
         jQuery.ajax({
-          url: "/fmr/search/name",
+          url: "/search/name",
           dataType: "json",
           type: "POST",
           data: {q: request.term,_token: _token},
@@ -150,7 +150,7 @@ function loginSubmit(field) {
             var _token = $('input[name="_token"]').val();
             showLoader();
             $.ajax({
-                url: "/fmr/user/login",
+                url: "/user/login",
                 method: 'POST',
                 data: { username: $('#utn').val(), email: $('#email').val(), password: $('#password').val(), _token: _token },
                 success: function (response) {
@@ -158,7 +158,7 @@ function loginSubmit(field) {
                     if (response.status) {
                         $('#utn').css('border-color', 'green');
                         $('#password').css('border-color', 'green');
-                        window.location.href = '/fmr/home';
+                        window.location.href = '/home';
                     } else {
                         $('#utn').css('border-color', 'red');
                         $('#password').css('border-color', 'red');
