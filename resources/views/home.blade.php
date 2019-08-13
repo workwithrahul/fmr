@@ -1,4 +1,4 @@
-@extends('layouts.app')
+<!-- @extends('layouts.app') -->
 @section('title', 'Home')
 @section('content')
 <section class="main-wrapper full-h homepage">
@@ -16,17 +16,17 @@
                   </div>
             </header>
               <div class="auth-middle-container homepage-container">
-                  <!-- <div class="logo">
-                    <h4>Welcome to</h4>
-                    <img src="{{ URL::asset('public/images/red-logo.png') }}" />
-                  </div> -->
-                  
+                  <div class="logo">
+                    <img src="{{ URL::asset('public/images/logo.png') }}" />
+                  </div>
+                  </br></br>
                   <div class="form-group" id="loginName">
                      
                       @csrf
                       <input type="text" id="search_name" placeholder="Search name..." class="form-control" />
-                  <div class="auth-form-wrapper" id="searchData" style="display: none;">
-                      <h2 id="searchEmail"></h2>
+                  <div class="auth-form-wrapper" id="searchData" >
+                      <h2 id="searchEmail">fdfdsf</h2>
+                      <span style="color:#e5e5e5;cursor:pointer;" onclick="copyToClipboard('#searchEmail')">Click to copy the above email</span>
                   </div>   
                   </div>
               </div>
